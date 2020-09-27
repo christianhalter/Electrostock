@@ -1,0 +1,7 @@
+{
+  "name": "Electrostock",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
