@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'elec-comp',
+    loadChildren: () => import('./elec-comp/elec-comp.module').then( m => m.ElecCompPageModule)
+  },
 ];
 
 @NgModule({
