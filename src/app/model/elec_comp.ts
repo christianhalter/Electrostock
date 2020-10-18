@@ -1,4 +1,4 @@
-export class Producto{
+export class Elec_comp{
   public internal_code:string;
   public manf_number: string;
   public manufacturer: string;
