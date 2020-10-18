@@ -7,5 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <ion-list>
+    <ion-item *ngFor="let item of components" [routerLink]="['/home',item.internal_code]">
+      <ion-avatar slot="start">
+        <img [src]="item.image"/>
+      </ion-avatar>
+      <ion-label>{{item.internal_code}}</ion-label>
+      <ion-label>{{item.description}}</ion-label>
+      <ion-label *ngIf="item.stock==0" color='danger'>SIN STOCK</ion-label>
+      <ion-label *ngIf="item.stock>0" type="number">{{item.stock}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
