@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'elec-comp',
     loadChildren: () => import('./elec-comp/elec-comp.module').then( m => m.ElecCompPageModule)
   },
+  {
+    path: 'pcb',
+    loadChildren: () => import('./pcb/pcb.module').then( m => m.PcbPageModule)
+  },
 ];
 
 @NgModule({
