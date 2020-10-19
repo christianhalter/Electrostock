@@ -8,5 +8,28 @@
 </ion-header>
 
 <ion-content>
-Chau
+  <ion-item>
+    <ion-img class="tamañoImg" [src]="elec_comp.image"></ion-img>
+  </ion-item>
+  <ion-item>
+    <ion-text color="dark">{{elec_comp.description}}</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-text>
+      <b>Internal code</b>: {{elec_comp.internal_code}}<br>
+      <b>Manufacturer part number</b>: {{elec_comp.manf_number}}<br>
+      <b>Manufacturer</b>: {{elec_comp.manufacturer}}<br>
+      <b>Description</b>: {{elec_comp.description}}<br>
+      <b>Digi-Key Link</b>: <a href="{{elec_comp.digikey_link}}" target="_blank"><ion-icon name="open-outline"></ion-icon></a><br>
+      <b>Last price</b>: US${{elec_comp.price}}<br>
+      <b>Category</b>: {{elec_comp.category}}<br>
+      <b>Value</b>: <ion-text *ngIf="elec_comp.value==undefined"> - </ion-text>
+        {{elec_comp.value}} {{elec_comp.unit}}<br>
+      <b>Datasheet</b>: 
+      <a href="{{elec_comp.datasheet}}" target="_blank"><ion-icon name="document-text-outline"></ion-icon></a>
+    </ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-label>STOCK: {{elec_comp.stock}}</ion-label>
+  </ion-item>
 </ion-content>
